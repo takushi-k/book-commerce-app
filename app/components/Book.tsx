@@ -25,7 +25,7 @@ const Book = ({ book, isPurchased }: BookProps) => {
   console.log(user)
 
   // //stripe checkout
-  const startCheckout = async (bookId: number) => {
+  const startCheckout = async (bookId: string) => {
     try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
